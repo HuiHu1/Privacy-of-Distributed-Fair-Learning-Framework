@@ -50,7 +50,7 @@ for loop=1:iteration
     W_fair(:,all(W_fair==0)) = [];
     W_unfair(:,all(W_unfair==0)) = [];
     [fa fb]=size(W_fair);
-    [fc, fd]=size(W_unfair);
+    [fc,fd]=size(W_unfair);
     fair_prediction = zeros(r,fb);
     unfair_prediction = zeros(r,fd);
     prediction_fair_sigal = zeros(r,1);
