@@ -84,7 +84,7 @@ for loop=1:iter
         predict_label = test_x*(W_projection*cofficient);
         [prow pcolumn]=size(predict_label);
         for i = 1:prow
-            if(abs(real(predict_label(i,1)))>=0.3)
+            if(abs(real(predict_label(i,1)))>=0.5)
                 predict_label(i,1)=1;
             else
                 predict_label(i,1)=0;
@@ -116,4 +116,4 @@ end
 writetable(table(data1),'prediction_error.txt','Delimiter','\t');
 writetable(table(SP),'Group fairness.txt','Delimiter','\t');
 t2=toc;
-display(strcat('parfor���м���ʱ�䣺',num2str(t2),'��'));
+display(strcat('parfor²¢ÐÐ¼ÆËãÊ±¼ä£º',num2str(t2),'Ãë'));
