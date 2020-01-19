@@ -14,7 +14,8 @@ new_unfair = zeros(featureNum,total);
 for i=1:total
     if(covariance_after(i,1)>0 && covariance_after(i,1)<=covariance)
         new_fair(:,i) = R(:,i); 
-    else
+    end
+    if(covariance_after(i,1)>covariance)
         new_unfair(:,i) = R(:,i);
     end
 end
