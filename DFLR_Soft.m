@@ -1,3 +1,4 @@
+%---------------------fix H------------------------
 clear
 clc;
 tic
@@ -106,9 +107,5 @@ end
 %-------------------------deviation----------------------------
 diviation_SP = std(SP);
 diviation_Error = std(data1);
-writetable(table(data1),'prediction_error.txt','Delimiter','\t');
-writetable(table(SP),'Group fairness.txt','Delimiter','\t');
-writetable(table(hypo),'hypo.txt','Delimiter','\t');
-writetable(table(diviation_SP,diviation_Error),'Deviation.txt','Delimiter','\t');
 t2=toc;
-display(strcat('parfor���м���ʱ�䣺',num2str(t2),'��'));
+display(strcat('parfor²¢ÐÐ¼ÆËãÊ±¼ä£º',num2str(t2),'Ãë'));
