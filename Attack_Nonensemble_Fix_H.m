@@ -12,7 +12,7 @@ sigma=1;
 R = normrnd(u,sigma,featureNum,total);
 %-----------------------------------------------------------------------
 covariance=0.1;
-iteration=9; 
+iteration=20; 
 select = 500;
 error_rate = zeros(iteration,1);
 infer_sum = zeros(select,iteration);
