@@ -33,11 +33,11 @@ end
 iter=20;
 featureNum=99;
 for i=1:iter
-    data1(i,1)=30;
-    SP(i,1)=30;
-    DI(i,1)=30;
-    data_minority(i,1)=30;
-    data_majority(i,1)=30;
+    data1(i,1)=Inf;
+    SP(i,1)=Inf;
+    DI(i,1)=Inf;
+    data_minority(i,1)=Inf;
+    data_majority(i,1)=Inf;
 end
 for loop=1:iter
     normal_data = DataSample(:,2:100);
@@ -68,7 +68,7 @@ for loop=1:iter
     pr_back_0=zeros(x1,1);
     pr_back_1=zeros(x1,1);
     al = zeros(iter,column);
-    for parameter=-3:3
+    for parameter=3 #(-5~5)
         lamda=10^(parameter);
         alpha_initial=10*normrnd(u,sigma2,column,1);
         for j=1:x1
@@ -133,4 +133,4 @@ end
 writetable(table(data1),'prediction_error.txt','Delimiter','\t');
 writetable(table(SP),'Group fairness.txt','Delimiter','\t');
 t2=toc;
-display(strcat('parfor���м���ʱ�䣺',num2str(t2),'��'));
+display(strcat('parfor²¢ÐÐ¼ÆËãÊ±¼ä£º',num2str(t2),'Ãë'));
