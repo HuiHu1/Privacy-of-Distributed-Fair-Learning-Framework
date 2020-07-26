@@ -33,11 +33,11 @@ end
 iter=20;
 featureNum=99;
 for i=1:iter
-    data1(i,1)=30;
-    SP(i,1)=30;
-    DI(i,1)=30;
-    data_minority(i,1)=30;
-    data_majority(i,1)=30;
+    data1(i,1)=Inf;
+    SP(i,1)=Inf;
+    DI(i,1)=Inf;
+    data_minority(i,1)=Inf;
+    data_majority(i,1)=Inf;
 end
 for loop=1:iter
     normal_data = DataSample(:,2:100);
@@ -71,7 +71,7 @@ for loop=1:iter
     if(b~=0)
         dimension=b;
         W_new =W_fair;
-        for parameter=-3:3
+        for parameter=3 #(-5~5)
             alpha =10^(parameter);
             cofficient = pinv(transpose(W_new)*transpose(train_x)*train_x*W_new+alpha*eye(dimension,dimension))*transpose(W_new)*transpose(train_x)*train_label;
             prediction_label = test_x*(W_new*cofficient);
