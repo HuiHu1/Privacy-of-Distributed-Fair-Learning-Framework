@@ -9,4 +9,4 @@ inference strategy and formulate it as an integer programming(IP) task. We show 
 
 ## Dataset
 
-Datasets for Fair Machine Learning Research: https://uwyomachinelearning.github.io/. 
+Datasets for Fair Machine Learning Research: https://github.com/HuiHu1/Datasets-for-Fair-Machine-Learning-Research.
